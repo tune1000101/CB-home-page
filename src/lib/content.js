@@ -5,6 +5,37 @@ export const NAV_LINKS = [
   { label: "About", href: "#about" },
 ];
 
+export const CARD_NAV_ITEMS = [
+  {
+    label: "Explore",
+    bgColor: "#15151d",
+    textColor: "#F8F8FF",
+    links: [
+      { label: "Home", href: "#home", ariaLabel: "Go to Home" },
+      { label: "Services", href: "#services", ariaLabel: "Go to Services" },
+      { label: "Portfolio", href: "#portfolio", ariaLabel: "Go to Portfolio" },
+    ],
+  },
+  {
+    label: "Company",
+    bgColor: "#1a1a24",
+    textColor: "#F8F8FF",
+    links: [
+      { label: "About", href: "#about", ariaLabel: "Go to About" },
+      { label: "Contact", href: "#contact", ariaLabel: "Go to Contact" },
+    ],
+  },
+  {
+    label: "Get in Touch",
+    bgColor: "#1e1e2b",
+    textColor: "#F8F8FF",
+    links: [
+      { label: "Email Us", href: "mailto:hello@creativebinary.org", ariaLabel: "Email Creative Binary" },
+      { label: "Free Audit", href: "#contact", ariaLabel: "Book a free audit" },
+    ],
+  },
+];
+
 export const SERVICES = [
   {
     icon: "Monitor",

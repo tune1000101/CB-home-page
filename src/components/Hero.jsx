@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import ColorBends from "./ColorBends";
 
 const container = {
   hidden: {},
@@ -17,18 +18,34 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden px-6"
+      className="relative isolate flex min-h-screen items-center justify-center overflow-hidden px-6"
     >
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="animate-float absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-blue/70 blur-[70px]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#0a0a0f_65%)]" />
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute inset-0 opacity-45">
+          <ColorBends
+            colors={["#4ba3e3", "#8a8a99", "#4ba3e3"]}
+            rotation={90}
+            speed={0.15}
+            scale={1.1}
+            frequency={1}
+            warpStrength={0.9}
+            mouseInfluence={0.5}
+            noise={0.06}
+            parallax={0.25}
+            iterations={1}
+            intensity={1.2}
+            bandWidth={6}
+            transparent
+          />
+        </div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#0a0a0f_92%)]" />
       </div>
 
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="mx-auto max-w-4xl text-center"
+        className="relative z-10 mx-auto max-w-4xl text-center"
       >
         <motion.div
           variants={item}
