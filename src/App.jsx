@@ -6,8 +6,6 @@ import HowItWorks from "./components/HowItWorks";
 import Demos from "./components/Demos";
 import Portfolio from "./components/Portfolio";
 import Testimonials from "./components/Testimonials";
-import WhyUs from "./components/WhyUs";
-import CTA from "./components/CTA";
 import GetInTouch from "./components/GetInTouch";
 import Footer from "./components/Footer";
 import { CARD_NAV_ITEMS } from "./lib/content";
@@ -31,8 +29,6 @@ function App() {
         <Demos />
         <Portfolio />
         <Testimonials />
-        <WhyUs />
-        <CTA />
         <GetInTouch />
       </main>
       <Footer />

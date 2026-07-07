@@ -48,7 +48,7 @@ function reviewCardImage({ quote, name, role }) {
     )
     .join("");
 
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="700" height="900" viewBox="0 0 700 900">
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1800" viewBox="0 0 700 900">
   <rect width="700" height="900" rx="32" fill="#ffffff"/>
   <rect x="2" y="2" width="696" height="896" rx="30" fill="none" stroke="#e6e9f1" stroke-width="4"/>
   <rect width="700" height="12" fill="#2563eb"/>
@@ -63,14 +63,16 @@ function reviewCardImage({ quote, name, role }) {
   return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
 }
 
+// Name and role are drawn on the card itself, so the gallery's under-card
+// label is left empty — at this card size the labels collide with each other.
 const GALLERY_ITEMS = TESTIMONIALS.map((t) => ({
   image: reviewCardImage(t),
-  text: `${t.name} · ${t.role}`,
+  text: "",
 }));
 
 export default function Testimonials() {
   return (
-    <section className="overflow-hidden border-t border-brand-border bg-brand-surface/50 py-28 sm:py-36">
+    <section id="reviews" className="overflow-hidden border-t border-brand-border bg-brand-surface/50 py-28 sm:py-36">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
           <h2 className="text-4xl font-bold tracking-tight text-brand-ink sm:text-5xl">
@@ -83,13 +85,13 @@ export default function Testimonials() {
       </div>
 
       <Reveal delay={0.1}>
-        <div className="relative mt-8" style={{ height: "560px" }}>
+        <div className="relative mt-8" style={{ height: "680px" }}>
           <CircularGallery
             items={GALLERY_ITEMS}
-            bend={3}
+            bend={2}
             textColor="#0b1220"
             borderRadius={0.05}
-            font="bold 26px Inter"
+            font="bold 30px Inter"
             scrollSpeed={2}
             scrollEase={0.05}
           />

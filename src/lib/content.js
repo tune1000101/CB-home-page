@@ -3,7 +3,7 @@ export const NAV_LINKS = [
   { label: "Services", href: "#services" },
   { label: "Demos", href: "#demos" },
   { label: "Portfolio", href: "#portfolio" },
-  { label: "About", href: "#about" },
+  { label: "Reviews", href: "#reviews" },
 ];
 
 export const CARD_NAV_ITEMS = [
@@ -22,7 +22,7 @@ export const CARD_NAV_ITEMS = [
     bgColor: "#e7eefc",
     textColor: "#0b1220",
     links: [
-      { label: "About", href: "#about", ariaLabel: "Go to About" },
+      { label: "Reviews", href: "#reviews", ariaLabel: "Go to Reviews" },
       { label: "Contact", href: "#contact", ariaLabel: "Go to Contact" },
     ],
   },
@@ -205,25 +205,6 @@ export const PORTFOLIO = [
     href: null,
     status: "In Progress",
     visual: "dashboard",
-  },
-];
-
-export const WHY_US = [
-  {
-    title: "We build custom",
-    description: "Nothing is templated or recycled — every system is built from zero for your business.",
-  },
-  {
-    title: "We move fast",
-    description: "Most projects delivered in one week, not one quarter.",
-  },
-  {
-    title: "We stay local",
-    description: "Roselle Park, NJ — available when you need us, not a call center overseas.",
-  },
-  {
-    title: "We grow with you",
-    description: "Every system is built to scale as your business does.",
   },
 ];
 

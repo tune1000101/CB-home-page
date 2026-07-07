@@ -370,11 +370,13 @@ class Media {
         this.plane.program.uniforms.uViewportSizes.value = [this.viewport.width, this.viewport.height];
       }
     }
-    this.scale = this.screen.height / 1500;
-    this.plane.scale.y = (this.viewport.height * (900 * this.scale)) / this.screen.height;
-    this.plane.scale.x = (this.viewport.width * (700 * this.scale)) / this.screen.width;
+    // Size planes off the viewport width so roughly three cards are in view
+    // on desktop (one on small screens) instead of the stock five-plus.
+    const perView = this.screen.width < 768 ? 1.35 : 3.4;
+    this.plane.scale.x = this.viewport.width / perView;
+    this.plane.scale.y = this.plane.scale.x * (900 / 700);
     this.plane.program.uniforms.uPlaneSizes.value = [this.plane.scale.x, this.plane.scale.y];
-    this.padding = 2;
+    this.padding = this.plane.scale.x * 0.12;
     this.width = this.plane.scale.x + this.padding;
     this.widthTotal = this.width * this.length;
     this.x = this.width * this.index;
