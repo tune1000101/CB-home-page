@@ -18,7 +18,7 @@ export default function Portfolio() {
     <section id="portfolio" className="border-t border-brand-border px-6 py-28 sm:py-36">
       <div className="mx-auto max-w-6xl">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-brand-white sm:text-5xl">
+          <h2 className="text-4xl font-bold tracking-tight text-brand-ink sm:text-5xl">
             Our Work
           </h2>
         </Reveal>
@@ -34,30 +34,30 @@ export default function Portfolio() {
             <motion.div
               key={project.title}
               variants={card}
-              className="group rounded-2xl border border-brand-border bg-brand-surface p-8 transition-all duration-200 hover:-translate-y-1 hover:border-brand-white/15 hover:shadow-[0_20px_50px_-15px_rgba(0,0,0,0.6)]"
+              className="group rounded-2xl border border-brand-border bg-brand-surface p-8 transition-all duration-200 hover:-translate-y-1 hover:border-brand-blue/30 hover:shadow-[0_20px_50px_-15px_rgba(15,23,42,0.12)]"
             >
               <div className="flex items-center justify-between">
-                <span className="rounded-full border border-brand-border px-3 py-1 text-xs font-medium text-brand-silver">
+                <span className="rounded-full border border-brand-border px-3 py-1 text-xs font-medium text-brand-muted">
                   {project.tag}
                 </span>
                 <span
                   className={`flex items-center gap-1.5 text-xs font-medium ${
-                    project.status === "Live" ? "text-brand-blue" : "text-brand-silver"
+                    project.status === "Live" ? "text-brand-blue" : "text-brand-muted"
                   }`}
                 >
                   <span
                     className={`h-1.5 w-1.5 rounded-full ${
-                      project.status === "Live" ? "bg-brand-blue" : "bg-brand-silver"
+                      project.status === "Live" ? "bg-brand-blue" : "bg-brand-muted"
                     }`}
                   />
                   {project.status}
                 </span>
               </div>
 
-              <h3 className="mt-6 text-xl font-semibold text-brand-white">
+              <h3 className="mt-6 text-xl font-semibold text-brand-ink">
                 {project.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-brand-silver">
+              <p className="mt-3 text-sm leading-relaxed text-brand-muted">
                 {project.description}
               </p>
 
@@ -75,7 +75,7 @@ export default function Portfolio() {
                   />
                 </a>
               ) : (
-                <div className="mt-6 border-t border-brand-border pt-5 text-sm text-brand-silver/60">
+                <div className="mt-6 border-t border-brand-border pt-5 text-sm text-brand-muted/60">
                   Details coming soon
                 </div>
               )}

@@ -17,7 +17,7 @@ export default function WhyUs() {
     <section id="about" className="border-t border-brand-border px-6 py-28 sm:py-36">
       <div className="mx-auto max-w-6xl">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-brand-white sm:text-5xl">
+          <h2 className="text-4xl font-bold tracking-tight text-brand-ink sm:text-5xl">
             Why Creative Binary
           </h2>
         </Reveal>
@@ -38,10 +38,10 @@ export default function WhyUs() {
               <span className="text-xs font-semibold text-brand-blue">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-4 text-lg font-semibold text-brand-white">
+              <h3 className="mt-4 text-lg font-semibold text-brand-ink">
                 {point.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-brand-silver">
+              <p className="mt-3 text-sm leading-relaxed text-brand-muted">
                 {point.description}
               </p>
             </motion.div>

@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 sm:flex-row sm:justify-between">
         <a href="#home" className="text-base font-semibold tracking-tight">
           <span className="text-brand-blue">Creative</span>{" "}
-          <span className="text-brand-silver">Binary</span>
+          <span className="text-brand-muted">Binary</span>
         </a>
 
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
@@ -14,7 +14,7 @@ export default function Footer() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm text-brand-silver transition-colors duration-200 hover:text-brand-white"
+              className="text-sm text-brand-muted transition-colors duration-200 hover:text-brand-ink"
             >
               {link.label}
             </a>
@@ -23,14 +23,14 @@ export default function Footer() {
 
         <a
           href="mailto:hello@creativebinary.org"
-          className="text-sm text-brand-silver transition-colors duration-200 hover:text-brand-white"
+          className="text-sm text-brand-muted transition-colors duration-200 hover:text-brand-ink"
         >
           hello@creativebinary.org
         </a>
       </div>
 
       <div className="mx-auto mt-10 max-w-6xl border-t border-brand-border pt-6 text-center">
-        <p className="text-xs text-brand-silver/60">
+        <p className="text-xs text-brand-muted/60">
           Creative Binary LLC 2026. All rights reserved. Roselle Park, New Jersey.
         </p>
       </div>

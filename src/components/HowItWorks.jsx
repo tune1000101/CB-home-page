@@ -17,7 +17,7 @@ export default function HowItWorks() {
     <section className="border-t border-brand-border px-6 py-28 sm:py-36">
       <div className="mx-auto max-w-6xl">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-brand-white sm:text-5xl">
+          <h2 className="text-4xl font-bold tracking-tight text-brand-ink sm:text-5xl">
             Simple Process. Real Results.
           </h2>
         </Reveal>
@@ -36,10 +36,10 @@ export default function HowItWorks() {
               <div className="relative z-10 mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-brand-border bg-brand-bg text-sm font-semibold text-brand-blue sm:mx-0">
                 {step.number}
               </div>
-              <h3 className="mt-6 text-lg font-semibold text-brand-white">
+              <h3 className="mt-6 text-lg font-semibold text-brand-ink">
                 {step.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-brand-silver">
+              <p className="mt-3 text-sm leading-relaxed text-brand-muted">
                 {step.description}
               </p>
             </motion.div>

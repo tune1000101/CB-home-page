@@ -1,6 +1,7 @@
 export const NAV_LINKS = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
+  { label: "Demos", href: "#demos" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "About", href: "#about" },
 ];
@@ -8,18 +9,18 @@ export const NAV_LINKS = [
 export const CARD_NAV_ITEMS = [
   {
     label: "Explore",
-    bgColor: "#15151d",
-    textColor: "#F8F8FF",
+    bgColor: "#f1f5fd",
+    textColor: "#0b1220",
     links: [
-      { label: "Home", href: "#home", ariaLabel: "Go to Home" },
       { label: "Services", href: "#services", ariaLabel: "Go to Services" },
+      { label: "Demos", href: "#demos", ariaLabel: "Go to Demos" },
       { label: "Portfolio", href: "#portfolio", ariaLabel: "Go to Portfolio" },
     ],
   },
   {
     label: "Company",
-    bgColor: "#1a1a24",
-    textColor: "#F8F8FF",
+    bgColor: "#e7eefc",
+    textColor: "#0b1220",
     links: [
       { label: "About", href: "#about", ariaLabel: "Go to About" },
       { label: "Contact", href: "#contact", ariaLabel: "Go to Contact" },
@@ -27,22 +28,22 @@ export const CARD_NAV_ITEMS = [
   },
   {
     label: "Get in Touch",
-    bgColor: "#1e1e2b",
-    textColor: "#F8F8FF",
+    bgColor: "#2563eb",
+    textColor: "#ffffff",
     links: [
+      { label: "Book a Meeting", href: "#booking", ariaLabel: "Book a meeting" },
       { label: "Email Us", href: "mailto:hello@creativebinary.org", ariaLabel: "Email Creative Binary" },
-      { label: "Free Audit", href: "#contact", ariaLabel: "Book a free audit" },
     ],
   },
 ];
 
 export const SERVICES = [
   {
-    icon: "Monitor",
-    title: "Web Design",
+    icon: "Brain",
+    title: "AI Systems",
     description:
-      "Clean professional websites built to convert visitors into clients. Fast, mobile ready, and built to last.",
-    price: "Starting at $500",
+      "Custom AI agents that answer your calls, chat with customers, book appointments, and follow up automatically — around the clock.",
+    price: "Custom quote",
   },
   {
     icon: "Zap",
@@ -52,11 +53,11 @@ export const SERVICES = [
     price: "Starting at $997",
   },
   {
-    icon: "Brain",
-    title: "AI Systems",
+    icon: "Monitor",
+    title: "Web Design & Marketing",
     description:
-      "Custom AI agents and operating systems that handle your calls, bookings, and workflows automatically.",
-    price: "Custom quote",
+      "Websites built to convert, plus the digital marketing to get them seen — SEO, content, and campaigns that bring customers in.",
+    price: "Starting at $500",
   },
 ];
 
@@ -121,9 +122,31 @@ export const WHY_US = [
   },
 ];
 
+export const AUTOMATIONS = [
+  "Missed-call text back",
+  "Lead follow-up sequences",
+  "Appointment booking & reminders",
+  "Google review requests",
+  "Invoice & payment chasing",
+  "CRM data sync",
+  "Social media scheduling",
+  "AI phone answering",
+];
+
 export const CONTACT_NEEDS = [
   "Website",
+  "Digital Marketing",
   "Automation System",
   "AI System",
   "Not sure yet",
+];
+
+export const BOOKING_SLOTS = [
+  "9:00 AM",
+  "10:00 AM",
+  "11:00 AM",
+  "1:00 PM",
+  "2:00 PM",
+  "3:00 PM",
+  "4:00 PM",
 ];

@@ -20,7 +20,7 @@ export default function Services() {
     <section id="services" className="px-6 py-28 sm:py-36">
       <div className="mx-auto max-w-6xl">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-brand-white sm:text-5xl">
+          <h2 className="text-4xl font-bold tracking-tight text-brand-ink sm:text-5xl">
             What We Build
           </h2>
         </Reveal>
@@ -38,15 +38,15 @@ export default function Services() {
               <motion.div
                 key={service.title}
                 variants={card}
-                className="group rounded-2xl border border-brand-border bg-brand-surface p-8 transition-all duration-200 hover:-translate-y-1 hover:border-brand-white/15 hover:shadow-[0_20px_50px_-15px_rgba(0,0,0,0.6)]"
+                className="group rounded-2xl border border-brand-border bg-brand-surface p-8 transition-all duration-200 hover:-translate-y-1 hover:border-brand-blue/30 hover:shadow-[0_20px_50px_-15px_rgba(15,23,42,0.12)]"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/10 text-brand-blue transition-colors duration-200 group-hover:bg-brand-blue/15">
                   <Icon size={22} strokeWidth={1.75} />
                 </div>
-                <h3 className="mt-6 text-xl font-semibold text-brand-white">
+                <h3 className="mt-6 text-xl font-semibold text-brand-ink">
                   {service.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-brand-silver">
+                <p className="mt-3 text-sm leading-relaxed text-brand-muted">
                   {service.description}
                 </p>
                 <div className="mt-6 border-t border-brand-border pt-5 text-sm font-semibold text-brand-blue">

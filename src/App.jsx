@@ -3,8 +3,10 @@ import Hero from "./components/Hero";
 import SocialProof from "./components/SocialProof";
 import Services from "./components/Services";
 import HowItWorks from "./components/HowItWorks";
+import Demos from "./components/Demos";
 import Portfolio from "./components/Portfolio";
 import WhyUs from "./components/WhyUs";
+import Booking from "./components/Booking";
 import CTA from "./components/CTA";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -15,10 +17,10 @@ function App() {
     <div className="min-h-screen bg-brand-bg">
       <CardNav
         items={CARD_NAV_ITEMS}
-        baseColor="#111118"
-        menuColor="#F8F8FF"
-        buttonBgColor="#4BA3E3"
-        buttonTextColor="#0A0A0F"
+        baseColor="#ffffff"
+        menuColor="#0b1220"
+        buttonBgColor="#2563eb"
+        buttonTextColor="#ffffff"
         ease="power3.out"
       />
       <main>
@@ -26,8 +28,10 @@ function App() {
         <SocialProof />
         <Services />
         <HowItWorks />
+        <Demos />
         <Portfolio />
         <WhyUs />
+        <Booking />
         <CTA />
         <Contact />
       </main>

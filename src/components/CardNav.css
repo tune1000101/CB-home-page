@@ -14,9 +14,9 @@
   height: 60px;
   padding: 0;
   background-color: white;
-  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid #e6e9f1;
   border-radius: 0.9rem;
-  box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 16px 40px -18px rgba(15, 23, 42, 0.18);
   position: relative;
   overflow: hidden;
   will-change: height;
@@ -89,11 +89,11 @@
 }
 
 .logo-text-primary {
-  color: #4ba3e3;
+  color: #2563eb;
 }
 
 .logo-text-secondary {
-  color: #8a8a99;
+  color: #5c6674;
 }
 
 .card-nav-cta-button {
