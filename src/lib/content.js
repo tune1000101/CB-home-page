@@ -49,42 +49,7 @@ export const SERVICES_SHOWCASE = [
       "Hosting, care & maintenance",
     ],
     buttonText: "Book a Free Consult",
-  },
-  {
-    serviceName: "AI & Automation",
-    description: "Systems that answer, follow up, and book — so you never miss a lead.",
-    features: [
-      "AI phone & chat agents",
-      "Missed-call text back",
-      "Lead follow-up sequences",
-      "Appointment booking & reminders",
-      "CRM & workflow integration",
-    ],
-    buttonText: "Book a Free Consult",
-    isFeatured: true,
-  },
-  {
-    serviceName: "Marketing & Branding",
-    description: "The identity and campaigns that keep new customers coming in.",
-    features: [
-      "Brand & visual identity",
-      "Google Business & review strategy",
-      "Email & SMS campaigns",
-      "Social media content",
-      "Ad creative & landing pages",
-    ],
-    buttonText: "Book a Free Consult",
-  },
-];
-
-export const SERVICE_DETAILS = [
-  {
-    id: "web",
-    title: "Website Design & Development",
-    intro:
-      "Your website is your hardest-working employee. We design and build sites that load fast, look sharp on every device, and are engineered around one goal — turning visitors into booked clients.",
-    visual: "web",
-    items: [
+    details: [
       {
         label: "Custom Website Design",
         body: "Designed from scratch around your brand and your customers — no templates, no page builders, nothing recycled.",
@@ -108,12 +73,18 @@ export const SERVICE_DETAILS = [
     ],
   },
   {
-    id: "ai",
-    title: "AI & Automation",
-    intro:
-      "Every missed call is a missed client. We build systems that answer instantly, follow up relentlessly, and book appointments while you work — without you touching a thing.",
-    visual: "ai",
-    items: [
+    serviceName: "AI & Automation",
+    description: "Systems that answer, follow up, and book — so you never miss a lead.",
+    features: [
+      "AI phone & chat agents",
+      "Missed-call text back",
+      "Lead follow-up sequences",
+      "Appointment booking & reminders",
+      "CRM & workflow integration",
+    ],
+    buttonText: "Book a Free Consult",
+    isFeatured: true,
+    details: [
       {
         label: "AI Phone & Chat Agents",
         body: "A trained agent that answers your calls and website chat 24/7, handles common questions, and books appointments into your calendar.",
@@ -137,12 +108,17 @@ export const SERVICE_DETAILS = [
     ],
   },
   {
-    id: "marketing",
-    title: "Marketing & Branding",
-    intro:
-      "A great website with no traffic is a billboard in the desert. We build the brand and run the channels that consistently put your business in front of the right people.",
-    visual: "marketing",
-    items: [
+    serviceName: "Marketing & Branding",
+    description: "The identity and campaigns that keep new customers coming in.",
+    features: [
+      "Brand & visual identity",
+      "Google Business & review strategy",
+      "Email & SMS campaigns",
+      "Social media content",
+      "Ad creative & landing pages",
+    ],
+    buttonText: "Book a Free Consult",
+    details: [
       {
         label: "Brand & Visual Identity",
         body: "Logo, colors, typography, and the design language that makes your business look established and trustworthy.",

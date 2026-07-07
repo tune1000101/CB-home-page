@@ -1,4 +1,6 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 import { RippleButton } from '@/components/ui/multi-type-ripple-buttons';
 
 // Adapted from "animated-glassy-pricing" (React Bits prompt):
@@ -119,12 +121,13 @@ const ShaderCanvas = () => {
 };
 
 export const ServiceCard = ({
-  serviceName, description, features, buttonText, isFeatured = false, href = '#booking'
+  serviceName, description, features, details = [], buttonText, isFeatured = false, href = '#booking'
 }) => {
+  const [expanded, setExpanded] = useState(false);
   const cardClasses = `
     backdrop-blur-[14px] bg-gradient-to-br rounded-2xl shadow-xl flex-1 max-w-xs px-7 py-8 flex flex-col transition-all duration-300
     from-white/70 to-white/40 border border-black/10
-    ${isFeatured ? 'lg:scale-105 relative ring-2 ring-blue-500/25 shadow-2xl' : ''}
+    ${isFeatured ? 'relative ring-2 ring-blue-500/25 shadow-2xl' : ''}
   `;
 
   return (
@@ -139,19 +142,67 @@ export const ServiceCard = ({
         <p className="text-[15px] text-brand-muted mt-2">{description}</p>
       </div>
       <div className="w-full my-5 h-px bg-[linear-gradient(90deg,transparent,rgba(11,18,32,0.12)_50%,transparent)]"></div>
-      <ul className="flex flex-col gap-2 text-[14px] text-brand-ink/90 mb-6">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center gap-2">
-            <CheckIcon className="text-brand-blue w-4 h-4 shrink-0" /> {feature}
-          </li>
-        ))}
-      </ul>
-      <RippleButton
-        onClick={() => { window.location.hash = href; }}
-        className="mt-auto w-full py-2.5 rounded-xl font-semibold text-[14px] transition bg-brand-blue hover:bg-brand-blue-deep text-white"
-      >
-        {buttonText}
-      </RippleButton>
+
+      {!expanded && (
+        <ul className="flex flex-col gap-2 text-[14px] text-brand-ink/90">
+          {features.map((feature, index) => (
+            <li key={index} className="flex items-center gap-2">
+              <CheckIcon className="text-brand-blue w-4 h-4 shrink-0" /> {feature}
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {details.length > 0 && (
+        <>
+          <button
+            type="button"
+            onClick={() => setExpanded((v) => !v)}
+            aria-expanded={expanded}
+            className="mt-4 flex w-full items-center justify-between gap-2 rounded-lg border border-black/10 bg-white/50 px-4 py-2.5 text-[13px] font-semibold text-brand-ink transition-colors duration-200 hover:bg-white/80"
+          >
+            What&apos;s included
+            <ChevronDown
+              size={16}
+              className={`text-brand-blue transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}
+            />
+          </button>
+          <AnimatePresence initial={false}>
+            {expanded && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                className="overflow-hidden"
+              >
+                <div className="flex flex-col gap-4 pt-4">
+                  {details.map((d) => (
+                    <div key={d.label}>
+                      <p className="flex items-center gap-2 text-[13.5px] font-semibold text-brand-ink">
+                        <CheckIcon className="text-brand-blue w-3.5 h-3.5 shrink-0" />
+                        {d.label}
+                      </p>
+                      <p className="mt-1 pl-[22px] text-[13px] leading-relaxed text-brand-muted">
+                        {d.body}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </>
+      )}
+
+      <div className="mt-auto pt-6">
+        <RippleButton
+          onClick={() => { window.location.hash = href; }}
+          className="w-full py-2.5 rounded-xl font-semibold text-[14px] transition bg-brand-blue hover:bg-brand-blue-deep text-white"
+        >
+          {buttonText}
+        </RippleButton>
+      </div>
     </div>
   );
 };
