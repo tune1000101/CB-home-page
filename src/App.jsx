@@ -2,9 +2,11 @@ import CardNav from "./components/CardNav";
 import Hero from "./components/Hero";
 import SocialProof from "./components/SocialProof";
 import Services from "./components/Services";
+import ServiceDetails from "./components/ServiceDetails";
 import HowItWorks from "./components/HowItWorks";
 import Demos from "./components/Demos";
 import Portfolio from "./components/Portfolio";
+import Testimonials from "./components/Testimonials";
 import WhyUs from "./components/WhyUs";
 import Booking from "./components/Booking";
 import CTA from "./components/CTA";
@@ -27,12 +29,14 @@ function App() {
         <Hero />
         <SocialProof />
         <Services />
+        <ServiceDetails />
         <HowItWorks />
         <Demos />
         <Portfolio />
+        <Testimonials />
         <WhyUs />
-        <Booking />
         <CTA />
+        <Booking />
         <Contact />
       </main>
       <Footer />
